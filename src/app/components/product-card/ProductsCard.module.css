@@ -1,7 +1,11 @@
+@font-face {
+    font-family: roboto;
+    src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+}
 .card {
     display: flex;
     flex-direction: column;
-    font-family: Roboto, Arial;
+    font-family: "Roboto", "Arial", sans-serif;
     width: 290px;
     padding: 1%;
     box-sizing: border-box;

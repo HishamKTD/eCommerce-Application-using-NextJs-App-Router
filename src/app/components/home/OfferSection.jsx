@@ -18,25 +18,23 @@ import Image from "next/image";
 
 function OfferSection() {
     return (
-        <>
-            <div className="row gap-2 pe-2 ps-2">
-                <Image src={OfferImg01} alt="OfferImg01" className="col btn p-0 border-0 rounded-0 m-0" />
-                <Image src={OfferImg02} alt="OfferImg02" className="col btn p-0 border-0 rounded-0 m-0" />
-                <Image src={OfferImg03} alt="OfferImg03" className="col btn p-0 border-0 rounded-0 m-0" />
-                <Image src={OfferImg04} alt="OfferImg04" className="col btn p-0 border-0 rounded-0 m-0" />
-                <Image src={OfferImg05} alt="OfferImg05" className="col btn p-0 border-0 rounded-0 m-0" />
-                <Image src={OfferImg06} alt="OfferImg06" className="col btn p-0 border-0 rounded-0 m-0" />
-                <Image src={OfferImg07} alt="OfferImg07" className="col btn p-0 border-0 rounded-0 m-0" />
-                <Image src={OfferImg08} alt="OfferImg08" className="col btn p-0 border-0 rounded-0 m-0" />
-                <Image src={OfferImg09} alt="OfferImg09" className="col btn p-0 border-0 rounded-0 m-0" />
-                <Image src={OfferImg10} alt="OfferImg10" className="col btn p-0 border-0 rounded-0 m-0" />
-                <Image src={OfferImg11} alt="OfferImg11" className="col btn p-0 border-0 rounded-0 m-0" />
-                <Image src={OfferImg12} alt="OfferImg12" className="col btn p-0 border-0 rounded-0 m-0" />
-                <Image src={OfferImg13} alt="OfferImg13" className="col btn p-0 border-0 rounded-0 m-0" />
-                <Image src={OfferImg14} alt="OfferImg14" className="col btn p-0 border-0 rounded-0 m-0" />
-                <Image src={OfferImg15} alt="OfferImg15" className="col btn p-0 border-0 rounded-0 m-0" />
-            </div>
-        </>
+        <div className="row gap-2 pe-2 ps-2">
+            <Image src={OfferImg01} alt="OfferImg01" className="col btn p-0 border-0 rounded-0 m-0" />
+            <Image src={OfferImg02} alt="OfferImg02" className="col btn p-0 border-0 rounded-0 m-0" />
+            <Image src={OfferImg03} alt="OfferImg03" className="col btn p-0 border-0 rounded-0 m-0" />
+            <Image src={OfferImg04} alt="OfferImg04" className="col btn p-0 border-0 rounded-0 m-0" />
+            <Image src={OfferImg05} alt="OfferImg05" className="col btn p-0 border-0 rounded-0 m-0" />
+            <Image src={OfferImg06} alt="OfferImg06" className="col btn p-0 border-0 rounded-0 m-0" />
+            <Image src={OfferImg07} alt="OfferImg07" className="col btn p-0 border-0 rounded-0 m-0" />
+            <Image src={OfferImg08} alt="OfferImg08" className="col btn p-0 border-0 rounded-0 m-0" />
+            <Image src={OfferImg09} alt="OfferImg09" className="col btn p-0 border-0 rounded-0 m-0" />
+            <Image src={OfferImg10} alt="OfferImg10" className="col btn p-0 border-0 rounded-0 m-0" />
+            <Image src={OfferImg11} alt="OfferImg11" className="col btn p-0 border-0 rounded-0 m-0" />
+            <Image src={OfferImg12} alt="OfferImg12" className="col btn p-0 border-0 rounded-0 m-0" />
+            <Image src={OfferImg13} alt="OfferImg13" className="col btn p-0 border-0 rounded-0 m-0" />
+            <Image src={OfferImg14} alt="OfferImg14" className="col btn p-0 border-0 rounded-0 m-0" />
+            <Image src={OfferImg15} alt="OfferImg15" className="col btn p-0 border-0 rounded-0 m-0" />
+        </div>
     );
 }
 

@@ -5,7 +5,7 @@ function CartDetails(props:any) {
     const numOfCartItems = cartItems.length;
     let cartTotalPrice = 0;
     
-    for (var i of cartItems) {
+    for (let i of cartItems) {
         cartTotalPrice += i.line_total.raw;
     }
 
