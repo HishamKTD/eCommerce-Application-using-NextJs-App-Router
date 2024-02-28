@@ -26,7 +26,7 @@ function CartProductRecommendation() {
     }, []);
   
     if (loading) {
-      return (<div className="spinner-border text-info p-4 fs-2" role="status" style={{marginLeft: "40%", marginTop: "50%"}}>
+      return (<div className="spinner-border text-info p-4 fs-2" style={{marginLeft: "40%", marginTop: "50%"}}>
       <span className="visually-hidden">Loading...</span>
     </div>);
     }
@@ -36,9 +36,9 @@ function CartProductRecommendation() {
     }
 
     //removing tags from product details
-  function removeTags(input: string) {
-    return input.replace(/<\/?[^>]+(>|$)/g, "");
-  }
+    function removeTags(input: string) {
+      return input.replace(/<[^>]*>?/g, "");
+    }
   
     return (
         <div>{

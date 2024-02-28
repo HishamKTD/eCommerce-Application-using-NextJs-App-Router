@@ -4,47 +4,70 @@ import React, { useEffect, useState } from "react";
 
 export default function ProductFilter(props: any) {
   const [selectedCategory, setSelectedCategory] = useState<string>("");
-  const [categories, setCategories] = useState<CategoryDataType[]>([])
+  const [categories, setCategories] = useState<CategoryDataType[]>([]);
 
   function handleCategoryChange(category: string): void {
     setSelectedCategory(category);
   }
-  const onChangeOfPriceFrom = (value:number)=>{
+  const onChangeOfPriceFrom = (value: number) => {
     props.setPriceFrom(value);
-  }
-  const onChangeOfPriceTo = (value:number)=>{
+  };
+  const onChangeOfPriceTo = (value: number) => {
     props.setPriceTo(value);
-  }
+  };
   useEffect(() => {
     props.setCategory(selectedCategory);
   }, [selectedCategory]);
 
-useEffect(()=>{
-  const getCategory = async ()=>{
-    const categories = await ProductsService.getCategories();
-    setCategories(categories)
-  }
-  getCategory();
-},[])
-
-  
+  useEffect(() => {
+    const getCategory = async () => {
+      const categories = await ProductsService.getCategories();
+      setCategories(categories);
+    };
+    getCategory();
+  }, []);
 
   return (
     <div className="pt-5 mt-5 ms-3">
       <form className="d-flex flex-column">
         <span className="fs-5 fw-medium">Category:</span>
-        <label key={'all'} className="btn btn-link text-start text-decoration-none pb-0" >
-            <input type="radio" value={'all'} checked={selectedCategory === ''} onChange={() => handleCategoryChange('')} className="btn-check" name={"All"}
-              id={'all'} autoComplete="off" />
-            <label className="btn btn-outline-primary" htmlFor={'All'}> {"All"}</label>
+        <label
+          key={"all"}
+          className="btn btn-link text-start text-decoration-none pb-0"
+        >
+          <input
+            type="radio"
+            value={"all"}
+            checked={selectedCategory === ""}
+            onChange={() => handleCategoryChange("")}
+            className="btn-check"
+            name={"All"}
+            id={"all"}
+            autoComplete="off"
+          />
+          <label className="btn btn-outline-primary" htmlFor={"All"}>
+            {" "}
+            {"All"}
           </label>
+        </label>
         {categories.map((c) => (
-          <label key={c.slug} className="btn btn-link text-start text-decoration-none pb-0">
-            <input type="radio" value={c.slug} checked={selectedCategory === c.slug} onChange={() => handleCategoryChange(c.slug)} className="btn-check" name={c.name}
+          <label
+            key={c.slug}
+            className="btn btn-link text-start text-decoration-none pb-0"
+          >
+            <input
+              type="radio"
+              value={c.slug}
+              checked={selectedCategory === c.slug}
+              onChange={() => handleCategoryChange(c.slug)}
+              className="btn-check"
+              name={c.name}
               id={c.slug}
               autoComplete="off"
             />
-            <label className="btn btn-outline-primary" htmlFor={c.slug}>{c.name}</label>
+            <label className="btn btn-outline-primary" htmlFor={c.slug}>
+              {c.name}
+            </label>
           </label>
         ))}
       </form>
@@ -56,8 +79,8 @@ useEffect(()=>{
             type="radio"
             name="flexRadioDefault"
             id="flexRadioDefault1"
-            onChange={()=>{
-                onChangeOfPriceFrom(0)
+            onChange={() => {
+              onChangeOfPriceFrom(0);
             }}
           />
           <label className="form-check-label" htmlFor="flexRadioDefault1">
@@ -70,8 +93,8 @@ useEffect(()=>{
             type="radio"
             name="flexRadioDefault"
             id="flexRadioDefault1"
-            onChange={()=>{
-                onChangeOfPriceFrom(10)
+            onChange={() => {
+              onChangeOfPriceFrom(10);
             }}
           />
           <label className="form-check-label" htmlFor="flexRadioDefault1">
@@ -84,8 +107,9 @@ useEffect(()=>{
             className="form-check-input"
             type="radio"
             name="flexRadioDefault"
-            id="flexRadioDefault1"onChange={()=>{
-                onChangeOfPriceFrom(50)
+            id="flexRadioDefault1"
+            onChange={() => {
+              onChangeOfPriceFrom(50);
             }}
           />
           <label className="form-check-label" htmlFor="flexRadioDefault1">
@@ -98,8 +122,9 @@ useEffect(()=>{
             className="form-check-input"
             type="radio"
             name="flexRadioDefault"
-            id="flexRadioDefault1"onChange={()=>{
-                onChangeOfPriceFrom(100)
+            id="flexRadioDefault1"
+            onChange={() => {
+              onChangeOfPriceFrom(100);
             }}
           />
           <label className="form-check-label" htmlFor="flexRadioDefault1">
@@ -112,8 +137,8 @@ useEffect(()=>{
             type="radio"
             name="flexRadioDefault"
             id="flexRadioDefault1"
-            onChange={()=>{
-                onChangeOfPriceFrom(500)
+            onChange={() => {
+              onChangeOfPriceFrom(500);
             }}
           />
           <label className="form-check-label" htmlFor="flexRadioDefault1">
@@ -126,8 +151,8 @@ useEffect(()=>{
             type="radio"
             name="flexRadioDefault"
             id="flexRadioDefault1"
-            onChange={()=>{
-                onChangeOfPriceFrom(1000)
+            onChange={() => {
+              onChangeOfPriceFrom(1000);
             }}
           />
           <label className="form-check-label" htmlFor="flexRadioDefault1">
@@ -142,10 +167,10 @@ useEffect(()=>{
             className="form-check-input"
             type="radio"
             name="flexRadioDefault"
-            id="flexRadioDefault1"onChange={()=>{
-                onChangeOfPriceTo(1000)
+            id="flexRadioDefault1"
+            onChange={() => {
+              onChangeOfPriceTo(1000);
             }}
-            
           />
           <label className="form-check-label" htmlFor="flexRadioDefault1">
             To $1000
@@ -157,8 +182,8 @@ useEffect(()=>{
             type="radio"
             name="flexRadioDefault"
             id="flexRadioDefault1"
-            onChange={()=>{
-                onChangeOfPriceTo(500)
+            onChange={() => {
+              onChangeOfPriceTo(500);
             }}
           />
           <label className="form-check-label" htmlFor="flexRadioDefault1">
@@ -172,8 +197,8 @@ useEffect(()=>{
             type="radio"
             name="flexRadioDefault"
             id="flexRadioDefault1"
-            onChange={()=>{
-                onChangeOfPriceTo(100)
+            onChange={() => {
+              onChangeOfPriceTo(100);
             }}
           />
           <label className="form-check-label" htmlFor="flexRadioDefault1">
@@ -187,8 +212,8 @@ useEffect(()=>{
             type="radio"
             name="flexRadioDefault"
             id="flexRadioDefault1"
-            onChange={()=>{
-                onChangeOfPriceTo(50)
+            onChange={() => {
+              onChangeOfPriceTo(50);
             }}
           />
           <label className="form-check-label" htmlFor="flexRadioDefault1">
@@ -201,8 +226,8 @@ useEffect(()=>{
             type="radio"
             name="flexRadioDefault"
             id="flexRadioDefault1"
-            onChange={()=>{
-                onChangeOfPriceTo(10)
+            onChange={() => {
+              onChangeOfPriceTo(10);
             }}
           />
           <label className="form-check-label" htmlFor="flexRadioDefault1">

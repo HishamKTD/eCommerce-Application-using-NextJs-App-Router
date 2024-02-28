@@ -7,11 +7,11 @@ import DownArrow from "../../asset/chevron-down.svg";
 import Image from "next/image";
 
 function ProductCard(props: any) {
-  var product: ProductsDataType = props.products;
+  const product: ProductsDataType = props.products;
 
   //removing tags from product details
   function removeTags(input: string) {
-    return input.replace(/<\/?[^>]+(>|$)/g, "");
+    return input.replace(/<[^>]*>?/g, "");
   }
   const productDetails = removeTags(product.description);
   return (

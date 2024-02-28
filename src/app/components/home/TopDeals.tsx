@@ -7,56 +7,190 @@ import TopDeals06 from "../../asset/top-deals-06.webp";
 import TopDeals07 from "../../asset/top-deals-07.webp";
 import Image from "next/image";
 
-
 function TopDeels() {
-    
-    return ( 
-        <>
-            <h4>Top Deals</h4>
-            <div className="d-flex gap-4" >
-                <div className="d-flex flex-column justify-content-center p-2" style={{border: "1px solid black"}}>
-                    <Image height={150} className="object-fit-contain" src={TopDeals01} alt="topDeals01" />
-                    <span style={{width: "fit-content", fontSize: "14px", textAlign: "center", marginTop: "10%"}}>Adidas Sketchers & more</span>
-                    <span style={{textAlign: "center"}}>Min. 50-80% off</span>
-                </div>
-                <div className="d-flex flex-column justify-content-center p-2" style={{border: "1px solid black"}}>
-                    <Image height={150} className="object-fit-contain" src={TopDeals02} alt="topDeals02" />
-                    <span style={{width: "fit-content", fontSize: "14px", textAlign: "center", marginTop: "10%"}}>Adidas Sketchers & more</span>
-                    <span style={{textAlign: "center"}}>Min. 50-80% off</span>
-                </div>
-                <div className="d-flex flex-column justify-content-center p-2" style={{border: "1px solid black"}}>
-                    <Image height={150} className="object-fit-contain" src={TopDeals03} alt="topDeals03" />
-                    <span style={{width: "fit-content", fontSize: "14px", textAlign: "center", marginTop: "10%"}}>Adidas Sketchers & more</span>
-                    <span style={{textAlign: "center"}}>Min. 50-80% off</span>
-                </div>
-                <div className="d-flex flex-column justify-content-center p-2" style={{border: "1px solid black"}}>
-                    <Image height={150} className="object-fit-contain" src={TopDeals04} alt="topDeals04" />
-                    <span style={{width: "fit-content", fontSize: "14px", textAlign: "center", marginTop: "10%"}}>Adidas Sketchers & more</span>
-                    <span style={{textAlign: "center"}}>Min. 50-80% off</span>
-                </div>
-                <div className="d-flex flex-column justify-content-center p-2" style={{border: "1px solid black"}}>
-                    <Image height={150} className="object-fit-contain" src={TopDeals05} alt="topDeals05" />
-                    <span style={{width: "fit-content", fontSize: "14px", textAlign: "center", marginTop: "10%"}}>Adidas Sketchers & more</span>
-                    <span style={{textAlign: "center"}}>Min. 50-80% off</span>
-                </div>
-                <div className="d-flex flex-column justify-content-center p-2" style={{border: "1px solid black"}}>
-                    <Image height={150} className="object-fit-contain" src={TopDeals06} alt="topDeals06" />
-                    <span style={{width: "fit-content", fontSize: "14px", textAlign: "center", marginTop: "10%"}}>Adidas Sketchers & more</span>
-                    <span style={{textAlign: "center"}}>Min. 50-80% off</span>
-                </div>
-                <div className="d-flex flex-column justify-content-center p-2" style={{border: "1px solid black"}}>
-                    <Image height={150} className="object-fit-contain" src={TopDeals07} alt="topDeals07" />
-                    <span style={{width: "fit-content", fontSize: "14px", textAlign: "center", marginTop: "10%"}}>Adidas Sketchers & more</span>
-                    <span style={{textAlign: "center"}}>Min. 50-80% off</span>
-                </div>
-                <div className="d-flex flex-column justify-content-center p-2" style={{border: "1px solid black"}}>
-                    <Image height={150} className="object-fit-contain" src={TopDeals01} alt="topDeals01" />
-                    <span style={{width: "fit-content", fontSize: "14px", textAlign: "center", marginTop: "10%"}}>Adidas Sketchers & more</span>
-                    <span style={{textAlign: "center"}}>Min. 50-80% off</span>
-                </div>
-            </div>
-        </>
-     );
+  return (
+    <>
+      <h4>Top Deals</h4>
+      <div className="d-flex gap-4">
+        <div
+          className="d-flex flex-column justify-content-center p-2"
+          style={{ border: "1px solid black" }}
+        >
+          <Image
+            height={150}
+            className="object-fit-contain"
+            src={TopDeals01}
+            alt="topDeals01"
+          />
+          <span
+            style={{
+              width: "fit-content",
+              fontSize: "14px",
+              textAlign: "center",
+              marginTop: "10%",
+            }}
+          >
+            Adidas Sketchers & more
+          </span>
+          <span style={{ textAlign: "center" }}>Min. 50-80% off</span>
+        </div>
+        <div
+          className="d-flex flex-column justify-content-center p-2"
+          style={{ border: "1px solid black" }}
+        >
+          <Image
+            height={150}
+            className="object-fit-contain"
+            src={TopDeals02}
+            alt="topDeals02"
+          />
+          <span
+            style={{
+              width: "fit-content",
+              fontSize: "14px",
+              textAlign: "center",
+              marginTop: "10%",
+            }}
+          >
+            Adidas Sketchers & more
+          </span>
+          <span style={{ textAlign: "center" }}>Min. 50-80% off</span>
+        </div>
+        <div
+          className="d-flex flex-column justify-content-center p-2"
+          style={{ border: "1px solid black" }}
+        >
+          <Image
+            height={150}
+            className="object-fit-contain"
+            src={TopDeals03}
+            alt="topDeals03"
+          />
+          <span
+            style={{
+              width: "fit-content",
+              fontSize: "14px",
+              textAlign: "center",
+              marginTop: "10%",
+            }}
+          >
+            Adidas Sketchers & more
+          </span>
+          <span style={{ textAlign: "center" }}>Min. 50-80% off</span>
+        </div>
+        <div
+          className="d-flex flex-column justify-content-center p-2"
+          style={{ border: "1px solid black" }}
+        >
+          <Image
+            height={150}
+            className="object-fit-contain"
+            src={TopDeals04}
+            alt="topDeals04"
+          />
+          <span
+            style={{
+              width: "fit-content",
+              fontSize: "14px",
+              textAlign: "center",
+              marginTop: "10%",
+            }}
+          >
+            Adidas Sketchers & more
+          </span>
+          <span style={{ textAlign: "center" }}>Min. 50-80% off</span>
+        </div>
+        <div
+          className="d-flex flex-column justify-content-center p-2"
+          style={{ border: "1px solid black" }}
+        >
+          <Image
+            height={150}
+            className="object-fit-contain"
+            src={TopDeals05}
+            alt="topDeals05"
+          />
+          <span
+            style={{
+              width: "fit-content",
+              fontSize: "14px",
+              textAlign: "center",
+              marginTop: "10%",
+            }}
+          >
+            Adidas Sketchers & more
+          </span>
+          <span style={{ textAlign: "center" }}>Min. 50-80% off</span>
+        </div>
+        <div
+          className="d-flex flex-column justify-content-center p-2"
+          style={{ border: "1px solid black" }}
+        >
+          <Image
+            height={150}
+            className="object-fit-contain"
+            src={TopDeals06}
+            alt="topDeals06"
+          />
+          <span
+            style={{
+              width: "fit-content",
+              fontSize: "14px",
+              textAlign: "center",
+              marginTop: "10%",
+            }}
+          >
+            Adidas Sketchers & more
+          </span>
+          <span style={{ textAlign: "center" }}>Min. 50-80% off</span>
+        </div>
+        <div
+          className="d-flex flex-column justify-content-center p-2"
+          style={{ border: "1px solid black" }}
+        >
+          <Image
+            height={150}
+            className="object-fit-contain"
+            src={TopDeals07}
+            alt="topDeals07"
+          />
+          <span
+            style={{
+              width: "fit-content",
+              fontSize: "14px",
+              textAlign: "center",
+              marginTop: "10%",
+            }}
+          >
+            Adidas Sketchers & more
+          </span>
+          <span style={{ textAlign: "center" }}>Min. 50-80% off</span>
+        </div>
+        <div
+          className="d-flex flex-column justify-content-center p-2"
+          style={{ border: "1px solid black" }}
+        >
+          <Image
+            height={150}
+            className="object-fit-contain"
+            src={TopDeals01}
+            alt="topDeals01"
+          />
+          <span
+            style={{
+              width: "fit-content",
+              fontSize: "14px",
+              textAlign: "center",
+              marginTop: "10%",
+            }}
+          >
+            Adidas Sketchers & more
+          </span>
+          <span style={{ textAlign: "center" }}>Min. 50-80% off</span>
+        </div>
+      </div>
+    </>
+  );
 }
 
 export default TopDeels;

@@ -1,8 +1,8 @@
-import React from 'react';
-import Star from '../../asset/star.svg';
-import StarHalf from '../../asset/star-half.svg';
-import StarFill from '../../asset/star-fill.svg';
-import Image from 'next/image';
+import React from "react";
+import Star from "../../asset/star.svg";
+import StarHalf from "../../asset/star-half.svg";
+import StarFill from "../../asset/star-fill.svg";
+import Image from "next/image";
 
 function ProductRating(props: any) {
   const { rate } = props;

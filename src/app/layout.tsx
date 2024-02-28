@@ -30,8 +30,8 @@ export default function RootLayout({
         <div>
           <Header />
         </div>
-        <div className="pt-5" style={{minHeight: "54vh"}}>
-        {children}
+        <div className="pt-5" style={{ minHeight: "54vh" }}>
+          {children}
         </div>
         <div>
           <Footer />

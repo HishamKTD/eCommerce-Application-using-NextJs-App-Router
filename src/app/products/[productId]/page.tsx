@@ -9,13 +9,12 @@ import OnAddToCart from "@/app/components/add-to-cart/OnAddToCart";
 import RecommendedProducts from "@/app/components/recommended-products/RecommendedProducts";
 import Image from "next/image";
 
-export default  function ProductDetail(props: any) {  
+export default function ProductDetail(props: any) {
   const [quantity, setQuantity] = useState<number>(1);
-  const [product, setProduct] = useState<ProductsDataType | undefined>()
-  var productId: string = props.params.productId;
-  var productDetails: string | undefined;
-  
-  
+  const [product, setProduct] = useState<ProductsDataType | undefined>();
+  const productId: string = props.params.productId;
+  let productDetails: string | undefined;
+
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -24,7 +23,7 @@ export default  function ProductDetail(props: any) {
       try {
         let getProduct = await ProductsService.getProductById(productId);
         setProduct(getProduct);
-      } catch (error:any) {
+      } catch (error: any) {
         console.error("Error fetching products:", error);
         setError(error);
       } finally {
@@ -36,31 +35,30 @@ export default  function ProductDetail(props: any) {
   }, []);
 
   if (loading) {
-    return ( <div className="row justify-content-center gap-3 pt-5" style={{backgroundColor: "#ebfafb"}}>
-        <div className="col-4 bg-white p-5 rounded-3 shadow align-baseline min-vh-100">
-          
-        </div>
-        <div className="col-7 bg-white p-5 rounded-3 shadow d-flex align-items-end min-vh-100">
-          
-        </div>
-      </div>)
+    return (
+      <div
+        className="row justify-content-center gap-3 pt-5"
+        style={{ backgroundColor: "#ebfafb" }}
+      >
+        <div className="col-4 bg-white p-5 rounded-3 shadow align-baseline min-vh-100"></div>
+        <div className="col-7 bg-white p-5 rounded-3 shadow d-flex align-items-end min-vh-100"></div>
+      </div>
+    );
   }
 
   if (error) {
-    return <div>Error fetching products. Please try again later.</div>; 
+    return <div>Error fetching products. Please try again later.</div>;
   }
-
 
   //removing tags from product details
-  function removeTags(input: string) {
-    return input.replace(/<\/?[^>]+(>|$)/g, "");
+  function removeTags(input: any) {
+    return input.replace(/<[^>]*>?/g, "");
   }
-  
-  if (product !== undefined && product.description !== undefined) {
+
+  if (product?.description !== undefined) {
     productDetails = removeTags(product.description);
   }
 
-  
   return (
     <div style={{ backgroundColor: "#ebfafb" }} className="pt-2">
       <div className="container-fluid p-5 pt-5 shadow">
@@ -140,17 +138,17 @@ export default  function ProductDetail(props: any) {
           </div>
         )}
         <div className="ms-5 mt-3 me-5 p-2 rounded-3 shadow bg-white">
-        <h3 className="ms-4 pt-3 ">Recommended Products</h3>
-        <RecommendedProducts />
-      </div>
-      <div className="ms-5 mt-3 me-5 p-2 rounded-3 shadow bg-white">
-        <h3 className="ms-4 pt-3">Similar Products</h3>
-        <RecommendedProducts />
-      </div>
-      <div className="ms-5 mt-3 me-5 p-2 rounded-3 shadow bg-white">
-        <h3 className="ms-4 pt-3">More Items</h3>
-        <RecommendedProducts />
-      </div>
+          <h3 className="ms-4 pt-3 ">Recommended Products</h3>
+          <RecommendedProducts />
+        </div>
+        <div className="ms-5 mt-3 me-5 p-2 rounded-3 shadow bg-white">
+          <h3 className="ms-4 pt-3">Similar Products</h3>
+          <RecommendedProducts />
+        </div>
+        <div className="ms-5 mt-3 me-5 p-2 rounded-3 shadow bg-white">
+          <h3 className="ms-4 pt-3">More Items</h3>
+          <RecommendedProducts />
+        </div>
       </div>
     </div>
   );

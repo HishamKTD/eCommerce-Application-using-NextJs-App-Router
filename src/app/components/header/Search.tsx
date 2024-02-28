@@ -5,19 +5,19 @@ import React, { ChangeEvent } from "react";
 export default function Search() {
   const router = useRouter();
 
-  const handleInputChange = (searchText:string) => {
-    if(searchText === ''){
+  const handleInputChange = (searchText: string) => {
+    if (searchText === "") {
       router.replace(`/products`);
-    }else{
+    } else {
       router.replace(`/products?search=${searchText}`);
     }
   };
 
   return (
     <div>
-      <form className={"d-flex"} role="search">
+      <form className={"d-flex p-0"} role="search">
         <input
-          className={"form-control me-2"}
+          className={"form-control me-2 "}
           type="search"
           placeholder="Search"
           aria-label="Search"
@@ -25,7 +25,10 @@ export default function Search() {
             handleInputChange(e.target.value);
           }}
         />
-        <button className="btn btn-outline-light border-2" type="button">
+        <button
+          className="btn btn-outline-light border-2 d-none d-sm-block"
+          type="button"
+        >
           Search
         </button>
       </form>
