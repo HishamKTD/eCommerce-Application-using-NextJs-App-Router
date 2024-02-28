@@ -28,7 +28,6 @@ export default function RecommendedProducts() {
     return (
       <div
         className="spinner-border text-info p-2 fs-4"
-        role="status"
         style={{ margin: "10% 0% 10% 50%" }}
       >
         <span className="visually-hidden">Loading...</span>
